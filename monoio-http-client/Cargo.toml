@@ -9,7 +9,7 @@ version = "0.0.2"
 [dependencies]
 monoio = { version = "0.0.9" }
 monoio-http = { version = "0.0.2", path = "../monoio-http" }
-monoio-rustls = { version = "0.0.7", path = "../../monoio-tls/monoio-rustls", default_features = false, features = [
+monoio-rustls = { version = "0.0.7", default_features = false, features = [
     "tls12",
 ], optional = true }
 
