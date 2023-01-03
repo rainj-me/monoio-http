@@ -12,7 +12,7 @@ use crate::{
     ParamMut,
 };
 
-const AVERAGE_HEADER_SIZE: usize = 30;
+const AVERAGE_HEADER_SIZE: usize = 32;
 
 #[derive(ThisError, Debug)]
 pub enum EncodeError {
@@ -217,7 +217,7 @@ where
     R::Parts: ParamMut<HeaderMap>,
     HeadEncoder: Encoder<R::Parts>,
     <HeadEncoder as Encoder<R::Parts>>::Error: Into<EncodeError>,
-    R: 'static
+    R: 'static,
 {
     type Error = EncodeError;
 
